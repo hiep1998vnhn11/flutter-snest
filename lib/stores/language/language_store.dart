@@ -1,6 +1,6 @@
-import 'package:boilerplate/data/repository.dart';
-import 'package:boilerplate/models/language/Language.dart';
-import 'package:boilerplate/stores/error/error_store.dart';
+import 'package:snest/data/repository.dart';
+import 'package:snest/models/language/Language.dart';
+import 'package:snest/stores/error/error_store.dart';
 import 'package:mobx/mobx.dart';
 
 part 'language_store.g.dart';
@@ -18,20 +18,20 @@ abstract class _LanguageStore with Store {
 
   // supported languages
   List<Language> supportedLanguages = [
+    Language(code: 'VN', locale: 'vi', language: 'Tiếng việt'),
     Language(code: 'US', locale: 'en', language: 'English'),
     Language(code: 'DK', locale: 'da', language: 'Danish'),
     Language(code: 'ES', locale: 'es', language: 'España'),
   ];
 
   // constructor:---------------------------------------------------------------
-  _LanguageStore(Repository repository)
-      : this._repository = repository {
+  _LanguageStore(Repository repository) : this._repository = repository {
     init();
   }
 
   // store variables:-----------------------------------------------------------
   @observable
-  String _locale = "en";
+  String _locale = "vi";
 
   @computed
   String get locale => _locale;
@@ -55,8 +55,9 @@ abstract class _LanguageStore with Store {
       code = "DK";
     } else if (_locale == 'es') {
       code = "ES";
+    } else {
+      code = "VN";
     }
-
     return code;
   }
 
@@ -70,7 +71,7 @@ abstract class _LanguageStore with Store {
   // general:-------------------------------------------------------------------
   void init() async {
     // getting current language from shared preference
-    if(_repository.currentLanguage != null) {
+    if (_repository.currentLanguage != null) {
       _locale = _repository.currentLanguage!;
     }
   }

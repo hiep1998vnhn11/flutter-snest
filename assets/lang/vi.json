@@ -1,0 +1,17 @@
+{
+    "login_start": "Below are list of strings for login",
+    "login_et_user_email": "Email hoặc số điện thoại",
+    "login_et_user_password": "Mật khẩu",
+    "login_btn_forgot_password": "Quên mật khẩu?",
+    "login_btn_sign_in": "Đăng nhập",
+    "login_error_fill_fields": "Vui lòng điền đầy đủ thông tin",
+    "login_end": "------------------------------------------------------------------------------------",
+
+    "home_start": "Below are list of strings for home",
+    "home_tv_posts": "Posts",
+    "home_tv_error": "Error",
+    "home_tv_no_post_found": "No posts found",
+    "home_tv_choose_language": "Choose Language",
+    "home_end": "-------------------------------------------------------------------------------------"
+
+}

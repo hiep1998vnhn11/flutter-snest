@@ -1,4 +1,4 @@
-import 'package:boilerplate/stores/error/error_store.dart';
+import 'package:snest/stores/error/error_store.dart';
 import 'package:mobx/mobx.dart';
 import 'package:validators/validators.dart';
 
@@ -46,7 +46,9 @@ abstract class _FormStore with Store {
 
   @computed
   bool get canLogin =>
-      !formErrorStore.hasErrorsInLogin && userEmail.isNotEmpty && password.isNotEmpty;
+      !formErrorStore.hasErrorsInLogin &&
+      userEmail.isNotEmpty &&
+      password.isNotEmpty;
 
   @computed
   bool get canRegister =>
@@ -78,10 +80,12 @@ abstract class _FormStore with Store {
   @action
   void validateUserEmail(String value) {
     if (value.isEmpty) {
-      formErrorStore.userEmail = "Email can't be empty";
-    } else if (!isEmail(value)) {
-      formErrorStore.userEmail = 'Please enter a valid email address';
-    } else {
+      formErrorStore.userEmail = "Hãy điền tài khoản của bạn";
+    }
+    //  else if (!isEmail(value)) {
+    //   formErrorStore.userEmail = 'Please enter a valid email address';
+    // }
+    else {
       formErrorStore.userEmail = null;
     }
   }
@@ -89,9 +93,9 @@ abstract class _FormStore with Store {
   @action
   void validatePassword(String value) {
     if (value.isEmpty) {
-      formErrorStore.password = "Password can't be empty";
+      formErrorStore.password = "Mật khẩu không được để trống";
     } else if (value.length < 6) {
-      formErrorStore.password = "Password must be at-least 6 characters long";
+      formErrorStore.password = "Mật khẩu phải có ít nhất 6 ký tự";
     } else {
       formErrorStore.password = null;
     }

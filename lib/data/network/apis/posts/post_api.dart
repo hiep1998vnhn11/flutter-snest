@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:boilerplate/data/network/constants/endpoints.dart';
-import 'package:boilerplate/data/network/dio_client.dart';
-import 'package:boilerplate/data/network/rest_client.dart';
-import 'package:boilerplate/models/post/post_list.dart';
+import 'package:snest/data/network/constants/endpoints.dart';
+import 'package:snest/data/network/dio_client.dart';
+import 'package:snest/data/network/rest_client.dart';
+import 'package:snest/models/post/post_list.dart';
 
 class PostApi {
   // dio instance
@@ -26,7 +26,7 @@ class PostApi {
     }
   }
 
-/// sample api call with default rest client
+  /// sample api call with default rest client
 //  Future<PostsList> getPosts() {
 //
 //    return _restClient

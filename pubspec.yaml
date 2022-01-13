@@ -1,5 +1,5 @@
-name: boilerplate
-description: A flutter boilerplate project created using MobX and Provider.
+name: snest
+description: A flutter snest project created using MobX and Provider.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -31,7 +31,7 @@ dependencies:
   http: ^0.13.3
 
   # Flogs, a powerful logging framework
-#  f_logs: ^1.2.2
+  #  f_logs: ^1.2.2
 
   # MobX is a library for reactively managing the state of your applications. Use the power of
   # observables, actions, and reactions to supercharge your Dart and Flutter apps.
@@ -82,17 +82,16 @@ dev_dependencies:
   analyzer: ^1.4.0
 
 flutter_icons:
-  image_path: "assets/icons/ic_launcher.png"
+  image_path: "assets/icons/ic_icon.png"
   android: true
   ios: true
-
+  remove_alpha_ios: true
 
 # For information on the generic Dart art of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -100,9 +99,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-  - assets/images/
-  - assets/icons/
-  - assets/lang/
+    - assets/images/
+    - assets/icons/
+    - assets/lang/
+    - assets/reactions/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
@@ -116,13 +116,13 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-  - family: ProductSans
-    fonts:
-    - asset: assets/fonts/Product-Sans-Regular.ttf
-    - asset: assets/fonts/Product-Sans-Italic.ttf
-      style: italic
-    - asset: assets/fonts/Product-Sans-Bold.ttf
-      weight: 700
+    - family: ProductSans
+      fonts:
+        - asset: assets/fonts/Product-Sans-Regular.ttf
+        - asset: assets/fonts/Product-Sans-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Product-Sans-Bold.ttf
+          weight: 700
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
